@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta name="google-site-verification" content="JRmo1Yua68yE8_cSQr5JAm9NMWZBSMNyY4qCmF2EGK0" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Scenic Pricelist — Premium & Topup</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-left">
+      <h1>Scenic Pricelist</h1>
+      <p>Pilih layanan digital & topup game favoritmu.</p>
+
+      <div class="hero-badges">
+        <span class="badge">⭐ 4.8</span>
+        <span class="badge">Fast Response</span>
+        <span class="badge">Akun Bergaransi</span>
+      </div>
+
+      <button class="hero-cta" onclick="scrollToProducts()">Lihat Produk</button>
+    </div>
+
+    <div class="hero-right">
+      <img src="Gambar/logo.jpg" alt="Hero" class="hero-img">
+    </div>
+  </div>
+</header>
+
+<!-- SWITCH TAB -->
+<section class="container switch-tabs">
+  <button class="tab-btn active" data-tab="apps">Aplikasi Premium</button>
+  <button class="tab-btn" data-tab="games">Top Up Game</button>
+</section>
+
+<!-- PRODUCT SECTIONS -->
+<main class="container product-wrapper">
+  <section class="products-grid" id="products-apps"></section>
+  <section class="products-grid hidden" id="products-games"></section>
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-card">
+    <button id="closeModal" class="close">✕</button>
+    <div class="modal-content">
+      <aside class="modal-left">
+        <img id="modalImg" src="" alt="">
+        <h2 id="modalTitle"></h2>
+        <div id="variants" class="variants-list"></div>
+      </aside>
+
+      <section class="modal-right">
+        <div id="checkoutSummary" class="summary"></div>
+        <form id="checkoutForm" class="checkout-form" autocomplete="off" novalidate>
+          <h3 class="form-title">Data Pembeli</h3>
+
+          <label>Nama</label>
+          <input id="buyerName" name="buyerName" required>
+
+          <label>Nomor WhatsApp</label>
+          <input id="buyerWA" name="buyerWA" required placeholder="0812xxxx">
+
+          <label>Email</label>
+          <input id="buyerEmail" name="buyerEmail" type="email" required>
+
+          <!-- <label>Akun tujuan (opsional)</label>
+          <input id="accountInfo" name="accountInfo"> -->
+
+          <label>Catatan (opsional)</label>
+          <textarea id="note" name="note" rows="2"></textarea>
+
+          <label>Pembayaran</label>
+          <select id="paymentMethod" name="paymentMethod" required>
+            <option value="QRIS">QRIS</option>
+            <option value="Gopay">Gopay</option>
+            <option value="Dana">Dana</option>
+            <option value="OVO">OVO</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+          </select>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Kirim Order</button>
+            <button type="button" id="btnCancel" class="btn ghost">Batal</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-credit">
+  Design Web By <strong>B8</strong>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
